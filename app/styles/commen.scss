@@ -18,10 +18,8 @@
     padding: 0 28px;
     z-index: 1000;
     transition: all .4s ease;
+    background-color: rgba(0,0,0,0.3);
 
-    &:hover{
-        background-color: rgba(0,0,0,0.3);
-    }
 
     @media (max-width: $screen-sm-max){
         padding: 0;
