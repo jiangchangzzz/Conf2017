@@ -6,7 +6,8 @@ module.exports = {
       ref: "origin/master",
       repo: "git@git.coding.net:jaychen88/imwebconf_2017.git",
       path: "/data/www/2017.imweb.io.tmp",
-      "post-deploy": "npm install --registry=https://registry.npm.taobao.org && bower install --allow-root && gulp",
+      //   "post-deploy": "npm install --registry=https://registry.npm.taobao.org && bower install --allow-root && gulp",
+      "post-deploy": '',
       env: {
         NODE_ENV: "production"
       }
