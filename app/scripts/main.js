@@ -5,7 +5,7 @@ $(document).ready(function(){
     
     if($(window).width()>768){
         $('#fullpage').fullpage({
-            anchors: ['home','lectuer','sponsor'/*,'information'*/,'about'],
+            anchors: ['home','lectuer','sponsor','information','about'],
             navigation: true,
             navigationPosition: 'right',
             loopBottom: true,
