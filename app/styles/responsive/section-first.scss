@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@media (max-width: $screen-sm-max) {
+  .section-first {
+
+    .first {
+      &-container {
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        top: 20%;
+      }
+
+      &-title {
+        font-size: 2rem;
+        font-weight: normal;
+        margin-bottom: 20px;
+      }
+
+      &-time {
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin: 0;
+      }
+    }
+  }
+}

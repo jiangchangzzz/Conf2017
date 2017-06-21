@@ -1,0 +1,20 @@
+@charset "utf-8";
+@media (max-width: $screen-sm-max) {
+  .section-information {
+    .list-text {
+      h3 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 26px;
+      }
+      .text-caption {
+        font-size: 14px;
+        .share-icon {
+          margin-top: -3px;
+        }
+      }
+    }
+  }
+}

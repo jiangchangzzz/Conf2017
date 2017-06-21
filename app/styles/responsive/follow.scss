@@ -1,0 +1,25 @@
+@charset "utf-8";
+@media (max-width: $screen-sm-max) {
+  body {
+    background: #4c4b66;
+  }
+  .follow {
+    background: #4c4b66;
+    position: initial;
+    .follow-list {
+      margin: 0 auto;
+      width: 160px;
+      li {
+        float: left;
+        padding: 0px 20px;
+      }
+    }
+    .follow-qr {
+      padding: 0px 46px;
+      width: auto;
+      height: auto;
+      margin: 0px auto;
+      margin-bottom: 20px;
+    }
+  }
+}

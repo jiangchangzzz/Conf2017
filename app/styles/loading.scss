@@ -1,0 +1,41 @@
+.wrap--fullpage {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #686881;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.loading-center {
+  text-align: center;
+}
+
+.earth-loading {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  border: 3px solid;
+  border-radius: 35px;
+  box-sizing: border-box;
+  background: url(/images/earth.png) no-repeat;
+  background-origin: border-box;
+  animation: bgTranslate 1.8s steps(8) infinite both;
+  margin-bottom: 20px;
+}
+
+@keyframes bgTranslate {
+  to {
+    background-position: -560px 0;
+  }
+}
+
+.loading-text {
+  font-size: 20px;
+}
