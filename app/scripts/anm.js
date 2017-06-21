@@ -1,6 +1,6 @@
 function Initialize() {
-    canvas.addEventListener("mousemove", MouseMove, false);
-    window.addEventListener("resize", ResizeCanvas, false);
+    canvas.addEventListener('mousemove', MouseMove, false);
+    window.addEventListener('resize', ResizeCanvas, false);
     setInterval(TimeUpdate, 20);
     context.beginPath();
     ResizeCanvas()
@@ -45,7 +45,7 @@ function TimeUpdate(e) {
             var o = particles[n].x > e.x ? particles[n].x : e.x;
             var u = particles[n].y < e.y ? particles[n].y : e.y;
             context.quadraticCurveTo(o, u, e.x, e.y);
-            context.strokeStyle = "rgba(249,179,121," + (1 - r / MAX_DIST_2) + " )";
+            context.strokeStyle = 'rgba(249,179,121,' + (1 - r / MAX_DIST_2) + ' )';
             i[n][t] = 1;
             i[t][n] = 1
         });
@@ -64,7 +64,7 @@ function MouseMove(e) {
     mouse.y = e.layerY
 }
 function Draw(e, t) {
-    context.strokeStyle = "#ff0000";
+    context.strokeStyle = '#ff0000';
     context.lineWidth = 4;
     context.lineTo(e, t);
     context.stroke()
@@ -79,12 +79,12 @@ function DistanceBetween(e, t) {
     return Math.sqrt(n * n + r * r)
 }
 function scrollToElement(e, t, n) {
-    t = typeof t != "undefined" ? t : 1e3;
-    n = typeof n != "undefined" ? n : 0;
+    t = typeof t != 'undefined' ? t : 1e3;
+    n = typeof n != 'undefined' ? n : 0;
     element = $(e);
     offset = element.offset();
     offsetTop = offset.top + n;
-    $("html, body").animate({
+    $('html, body').animate({
         scrollTop: offsetTop
     }, t)
 }
@@ -117,7 +117,7 @@ window.Anm = {
         width = canvas.width || 1280;
         height = canvas.height || 150;
         if (canvas && canvas.getContext) {
-            context = canvas.getContext("2d");
+            context = canvas.getContext('2d');
             Initialize()
         }
     }
