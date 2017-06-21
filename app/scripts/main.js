@@ -1,8 +1,7 @@
 'use strict';
 
-$(document).ready(function() {
-  //全屏滚动效果
-
+$(document).ready(function(){
+    //全屏滚动效果
   if ($(window).width() > 768) {
     $('#fullpage').fullpage({
       anchors: ['home', 'lectuer', 'sponsor' /*,'information'*/ , 'about'],
