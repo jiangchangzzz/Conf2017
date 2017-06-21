@@ -1,7 +1,7 @@
 node_modules
-dist
 .tmp
 bower_components
 test/bower_components
 yarn.lock
 .DS_Store
+npm-debug.log
