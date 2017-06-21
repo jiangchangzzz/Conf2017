@@ -2,6 +2,7 @@
 @import './reset.scss';
 @import './sprite.scss';
 @import './commen.scss';
+
 @import './loading.scss';
 
 .section.active{
@@ -39,135 +40,6 @@
     .first-container{
         margin: 80px 20px;
     }
-
-    .scene {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    /*          top: 50%;
-          margin-top: -200px;*/
-    position: absolute;
-  }
-  .font_ct {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    @media (max-width: $screen-sm-max) {
-      display: none !important;
-    }
-    span{
-      /*border: 1px solid #ccc;*/
-      /*text-shadow: 1px 1px 1px #fff;*/
-      @media (min-width: $screen-sm-max) {
-      animation: fadeInUp 2.0s;
-    }
-    }
-    .p_1 {
-      position: absolute;
-      top: 200px;
-      left: 230px;
-      font-size: 28px;
-      color: #FFFF66;
-    }
-    .p_2 {
-      position: absolute;
-      top: 900px;
-      left: 930px;
-      font-size: 32px;
-      color: #009966;
-    }
-    .p_3 {
-      position: absolute;
-      top: 100px;
-      left: 1230px;
-      font-size: 26px;
-      color: #CC0066;
-    }
-    .p_4 {
-      position: absolute;
-      top: 90px;
-      left: 700px;
-      font-size: 30px;
-      color: #0099CC;
-    }
-    .p_5 {
-      position: absolute;
-      top: 500px;
-      left: 1650px;
-      font-size: 28px;
-      color: #FF6600;
-    }
-    .p_6 {
-      position: absolute;
-      top: 150px;
-      left: 1600px;
-      font-size: 36px;
-      color: #CC6600;
-    }
-    .p_7 {
-      position: absolute;
-      top: 800px;
-      left: 1530px;
-      font-size: 32px;
-      color: #009933;
-    }
-    .p_8 {
-      position: absolute;
-      top: 400px;
-      left: 300px;
-      font-size: 32px;
-      color: #FF9900;
-    }
-    .p_9 {
-      position: absolute;
-      top: 90px;
-      left: 930px;
-      font-size: 24px;
-    }
-    .p_10 {
-      position: absolute;
-      top: 300px;
-      left: 1530px;
-      font-size: 28px;
-      color: #FFFF99;
-    }
-    .p_11 {
-      position: absolute;
-      top: 930px;
-      left: 600px;
-      font-size: 30px;
-      color: #FF6600;
-    }
-    .p_12 {
-      position: absolute;
-      top: 500px;
-      left: 400px;
-      font-size: 36px;
-      color: #FF9900;
-    }
-    .p_13 {
-      position: absolute;
-      top: 930px;
-      left: 1600px;
-      font-size: 28px;
-       olor: #0099CC;
-    }
-    .p_14 {
-      position: absolute;
-      top: 850px;
-      left: 300px;
-      font-size: 28px;
-      color: #CC0066;
-    }
-    .p_15 {
-      position: absolute;
-      top: 200px;
-      left: 250px;
-      font-size: 36px;
-      color: #FFFF66;
-    }
-  }
 
     .first-title{
         margin-bottom: 80px;
@@ -450,7 +322,7 @@
 
     .sponsor-text{
         float: left;
-        max-width: 740px;
+        max-width: 742px;
         padding: 20px;
         color: #fff;
         font-size: 18px;
@@ -493,6 +365,10 @@
     .list-img{
         max-width: 276px;
         width: 100%;
+        height: 200px;
+        border: 2px solid #fff;
+        background-position: center;
+        background-size: cover;
 
         img{
             width: 100%;
@@ -508,12 +384,13 @@
         padding: 0 30px;
         box-sizing: border-box;
 
-        h3{
-            margin-top: 20px;
-            margin-bottom: 18px;
+        h3 a{
             color: #4de577;
-            font-size: 30px;
+            font-size: 26px;
             font-weight: bold;
+            line-height: 26px;
+            margin-bottom: 12px;
+            display: inline-block;
         }
 
         p{
@@ -896,11 +773,11 @@
             height: 100%;
         }
 
-        &:hover{
-            position: relative;
-            z-index: 100;
-            transform: scale(1.2);
-        }
+        // &:hover{
+        //     position: relative;
+        //     z-index: 100;
+        //     transform: scale(1.2);
+        // }
     }
 }
 
