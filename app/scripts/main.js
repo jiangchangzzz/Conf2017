@@ -79,6 +79,7 @@ $(document).ready(function() {
     img.src = url;
   }
 
+  Anm.init(document.getElementById('scene-canvas'));
   //设置一个超时，如果时间内没有加载完图片，也进入页面
   setTimeout(function() {
     $('#loading').hide();
