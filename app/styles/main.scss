@@ -224,10 +224,7 @@
         margin-bottom: 80px;
         font-size: 96px;
         font-weight: bold;
-
-        @media (max-width: $screen-sm-max){
-            font-size: 48px;
-        }
+        word-spacing: 26px;
     }
 
     .first-time{
@@ -408,9 +405,22 @@
         color: #fff;
 
         h2{
+            display: flex;
             margin-bottom: 32px;
             font-size: 48px;
             font-weight: bold;
+
+            .letter{
+                font-weight: lighter;
+            }
+
+            .point{
+                font-size: 18px;
+            }
+
+            &:before,:after{
+                flex-grow: 1;
+            }
         }
 
         p{
