@@ -7,7 +7,6 @@ $(document).ready(function(){
       anchors: ['home', 'lectuer', 'sponsor', 'information' , 'about', 'partner'],
       navigation: true,
       navigationPosition: 'right',
-      loopBottom: true,
       afterLoad: function(anchorLink, index) {
         activeLink($('#header-nav').children().eq(index - 1));
       },
