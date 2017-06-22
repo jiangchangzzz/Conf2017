@@ -280,7 +280,6 @@
     }
 
     &.lecture{
-        float: left;
         padding: 112px 10px 0 180px;
         background-image: url(#{$cdn}/images/volunteer-bg.png);
         background-position: center center;
@@ -307,7 +306,6 @@
     }
 
     &.sponsor{
-        float: right;
         padding: 112px 180px 0 10px;
         background-image: url(#{$cdn}/images/sponsor-bg.png);
         background-position: center center;
@@ -462,8 +460,10 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        max-width: 1284px;
+        max-width: 1344px;
         margin: 80px auto 0 auto;
+        padding: 0 30px;
+        box-sizing: border-box;
 
         @media (max-width: $screen-sm-max){
             flex-direction: column;
@@ -490,17 +490,17 @@
 .section-sponsor{
 
     .sponsor-container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
         width: 100%;
-        max-width: 1284px;
+        max-width: 1344px;
         margin: 80px auto 0 auto;
-    }
-
-    .sponsor{
-        float: right;
+        padding: 0 30px;
+        box-sizing: border-box;
     }
 
     .sponsor-text{
-        float: left;
         max-width: 742px;
         padding: 20px;
         color: #fff;

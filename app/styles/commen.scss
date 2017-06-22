@@ -87,7 +87,7 @@
         &.active:before{
             left: 0;
             width: 90px;
-            transition: all 500ms;
+            transition: all 500ms linear;
         }
 
         &:hover{
