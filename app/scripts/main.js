@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
   } else {
     $('#fullpage').fullpage({
-      anchors: ['home', 'lectuer', 'sponsor', 'information', 'about'],
+      anchors: ['home', 'lectuer', 'sponsor', 'information', 'about', 'partner'],
       navigation: true,
       navigationPosition: 'right',
       loopBottom: true,

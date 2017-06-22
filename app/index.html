@@ -681,15 +681,11 @@
 
 
   <!-- build:js scripts/vendor.js -->
-    <script src="scripts/anm.js"></script>
+  <script src="scripts/anm.js"></script>
   <script src="scripts/scrolloverflow.js"></script>
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/fullpage.js/dist/jquery.fullpage.js"></script>
-  <script src="/bower_components/parallax/deploy/parallax.js"></script>
-  <script src="/bower_components/parallax/deploy/parallax.min.js"></script>
-  <script src="/bower_components/parallax/deploy/jquery.parallax.js"></script>
-  <script src="/bower_components/parallax/deploy/jquery.parallax.min.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -698,5 +694,21 @@
   <!-- <script src="scripts/loading.js"></script> -->
   <!-- endbuild -->
 
-  <script type="text/javascript" src="//tajs.qq.com/stats?sId=49998595" charset="UTF-8"></script>
+
+  <script>
+    var _mtac = {
+      "performanceMonitor": 1,
+      "senseQuery": 1
+    };
+    (function () {
+      var mta = document.createElement("script");
+      mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.4";
+      mta.setAttribute("name", "MTAH5");
+      mta.setAttribute("sid", "500476233");
+      mta.setAttribute("cid", "500476236");
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(mta, s);
+    })();
+
+  </script>
 </body>
