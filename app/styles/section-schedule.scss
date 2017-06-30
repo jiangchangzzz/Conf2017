@@ -1,0 +1,322 @@
+/* 日程页面 */
+.section-schedule{
+
+    .schedule-container{
+        width: 100%;
+        max-width: 1300px;
+        margin: 200px auto;
+    }
+
+    .clock-icon{
+        display: block;
+        margin: 0 auto;
+        @include sprite($clock);
+    }
+}
+
+.list-conainer{
+    margin: 12px 0;
+}
+
+/* 讲师信息框 */
+.info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: -6px;
+    padding: 10px 10px 10px 0;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 50px;
+
+    .info-text{
+        width: 360px;
+        text-align: right;
+
+        h3{
+            padding: 6px;
+            color: #5dcf80;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 1px solid #fff;
+        }
+
+        p{
+            padding: 6px;
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+
+    .info-img{
+        border-radius: 50%;
+    }
+
+    &.left{
+        padding: 10px 0 10px 10px;
+
+        .info-text{
+            text-align: left;
+            order: 2;
+
+            @media (max-width: $screen-sm-max){
+                text-align: right;
+            }
+        }
+
+        .info-img{
+            order: 1;
+        }
+    }
+
+    &:hover .pop{
+        display: block;
+    }
+}
+
+.schedule-list{
+    position: relative;
+    padding: 20px 0;
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        height: 100%;
+        margin-left: -1px;
+        border-left: 1px dashed #fff;
+
+        @media (max-width: $screen-sm-max){
+            display: none;
+        }
+    }
+
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 仅有文本的时间条目 */
+    .list-text{
+        padding: 25px 0;
+    }
+
+    /* 有头像的时间条目 */
+    .list-head{
+        padding: 5px 0;
+    }
+
+    .list-left{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        flex-basis: 50%;
+        text-align: right;
+
+        @media (max-width: $screen-sm-max){
+            flex-basis: 10%;
+        }
+    }
+
+    .list-left:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -6px;
+        display: block;
+        width: 13px;
+        height: 13px;
+        margin-top: -6px;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    .list-right{
+        display: flex;
+        justify-content: flex-start;
+        flex-basis: 50%;
+        text-align: left;
+
+        @media (max-width: $screen-sm-max){
+            flex-basis: 90%;
+        }
+    }
+
+    //@media (max-width: $screen-sm-max){
+        .reverse{
+            .list-left{
+                order: 2;
+                justify-content: flex-start;
+            }
+
+            .list-left:after{
+                left: -6px;
+            }
+
+            .list-right{
+                order: 1;
+                justify-content: flex-end;
+            }
+
+            .info-img{
+                order: 2;
+            }
+
+            .info-text{
+                order: 1;
+            }
+       // }
+    }
+
+    .time{
+        padding: 0 20px;
+        color: #fff;
+        font-size: 30px;
+        box-sizing: border-box;
+    }
+
+    .text{
+        padding: 0 20px;
+        color: #e4dbff;
+        font-size: 20px;
+        box-sizing: border-box;
+    }
+}
+
+/* 弹出框 */
+.pop{
+    position: absolute;
+    display: none;
+    width: 350px;
+    padding: 22px;
+    background-color: #484859;
+    text-align: left;
+    border: 1px solid #7b7b97;
+    border-radius: 8px;
+
+    h3{
+        margin-bottom: 10px;
+        color: #4de577;
+        font-size: 22px;
+    }
+
+    .pop-lecture{
+        margin-bottom: 18px;
+        color: #4de577;
+        font-size: 16px;
+    }
+
+    .pop-content{
+        color: #dbdbdd;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &.left{
+        right: 100%;
+    }
+
+    &.right{
+        left: 100%;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 16px solid transparent;
+        border-bottom: 16px solid transparent;
+        border-right: 16px solid #484859;
+    }
+
+    &.left:after{
+        right: -16px;
+        transform: rotate(180deg);
+    }
+
+    &.right:after{
+        left: -16px;
+    }
+}
+
+/* 会场tab */
+.place-list{
+    display: flex;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+
+    li{
+        height: 60px;
+        line-height: 60px;
+        color: #d1bcb5;
+        flex-grow: 1;
+        cursor: pointer;
+    }
+
+    li.active{
+        color: #fff;
+    }
+
+    li:nth-child(1){
+        background-color: #387b8a;
+    }
+
+    li:nth-child(2){
+        background-color: #9d6750;
+    }
+
+    li:nth-child(3){
+        background-color: #455b9f;
+    }
+}
+
+.place-container{
+    background-color: rgba(255,255,255,0.15);
+    padding: 12px 0;
+}
+
+.place-content{
+    display: none;
+
+    &.active{
+        display: block;
+    }
+}
+
+.place-end{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px 0;
+
+    .end-time{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+
+        &:before,
+        &:after{
+            content: '';
+            display: block;
+            height: 66px;
+            margin-left: -1px;
+            border-left: 1px dashed #fff;
+        }
+    }
+
+    .end-word{
+        margin-top: 12px;
+        color: #e4dbff;
+        font-size: 20px;
+    }
+}
