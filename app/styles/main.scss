@@ -398,7 +398,7 @@
     .thrid-container{
         width: 100%;
         max-width: 1306px;
-        margin: 40px auto;
+        margin: 80px auto 0 auto;
     }
 
     .thrid-text{
@@ -522,7 +522,7 @@
         line-height: 36px;
 
         p{
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         a{
             color:#4de577;
@@ -690,6 +690,10 @@
 
         a{
             display: block;
+        }
+
+        .zhi-logo{
+            @include sprite($zhi-logo);
         }
 
         .qq-logo{

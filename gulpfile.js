@@ -15,6 +15,8 @@ const reload = browserSync.reload;
 
 let dev = true;
 
+const htmlPath=['dist/index.html','dist/en.html']
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/main.scss')
     .pipe($.plumber())
@@ -98,7 +100,7 @@ gulp.task('images', () => {
 });
 
 gulp.task('rev',()=>{
-  return gulp.src(['rev/*json','dist/index.html'])
+  return gulp.src(['rev/*json','dist/index.html', 'dist/en.html'])
     .pipe(revCollector())
     .pipe(gulp.dest('dist'));
 });
@@ -205,7 +207,7 @@ gulp.task('sprite',()=>{
 
 //内联css
 gulp.task('inline',()=>{
-  return gulp.src('dist/index.html')
+  return gulp.src(htmlPath)
     .pipe($.inline({
       base: 'dist/',
       disabledTypes: ['svg', 'img', 'js'],
@@ -215,7 +217,7 @@ gulp.task('inline',()=>{
 
 //为图片添加cdn前缀
 gulp.task('preimg',()=>{
-  return gulp.src('dist/index.html')
+  return gulp.src(htmlPath)
     .pipe(prefix(qiniuOption.origin,[
       { match: 'img[src]', attr: 'src' }
     ]))
