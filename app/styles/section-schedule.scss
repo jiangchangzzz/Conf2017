@@ -2,8 +2,7 @@
 .section-schedule{
 
     .schedule-container{
-        width: 100%;
-        max-width: 1300px;
+        width: 1300px;
         margin: 200px auto;
     }
 
@@ -57,10 +56,6 @@
         .info-text{
             text-align: left;
             order: 2;
-
-            @media (max-width: $screen-sm-max){
-                text-align: right;
-            }
         }
 
         .info-img{
@@ -86,10 +81,6 @@
         height: 100%;
         margin-left: -1px;
         border-left: 1px dashed #fff;
-
-        @media (max-width: $screen-sm-max){
-            display: none;
-        }
     }
 
     li{
@@ -114,10 +105,6 @@
         position: relative;
         flex-basis: 50%;
         text-align: right;
-
-        @media (max-width: $screen-sm-max){
-            flex-basis: 10%;
-        }
     }
 
     .list-left:after{
@@ -138,37 +125,33 @@
         justify-content: flex-start;
         flex-basis: 50%;
         text-align: left;
-
-        @media (max-width: $screen-sm-max){
-            flex-basis: 90%;
-        }
     }
 
-    //@media (max-width: $screen-sm-max){
-        .reverse{
-            .list-left{
-                order: 2;
-                justify-content: flex-start;
-            }
+    // @media (max-width: $screen-sm-max){
+    //     .reverse{
+    //         .list-left{
+    //             order: 2;
+    //             justify-content: flex-start;
+    //         }
 
-            .list-left:after{
-                left: -6px;
-            }
+    //         .list-left:after{
+    //             left: -6px;
+    //         }
 
-            .list-right{
-                order: 1;
-                justify-content: flex-end;
-            }
+    //         .list-right{
+    //             order: 1;
+    //             justify-content: flex-end;
+    //         }
 
-            .info-img{
-                order: 2;
-            }
+    //         .info-img{
+    //             order: 2;
+    //         }
 
-            .info-text{
-                order: 1;
-            }
-       // }
-    }
+    //         .info-text{
+    //             order: 1;
+    //         }
+    //    }
+    // }
 
     .time{
         padding: 0 20px;

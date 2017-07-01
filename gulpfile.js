@@ -96,14 +96,20 @@ gulp.task('images', () => {
     }))*/
     .pipe(gulp.dest('dist/images'))
     .pipe(rev.manifest())
-    .pipe(gulp.dest('rev'));
+    .pipe(gulp.dest('rev/images'));
 });
 
 gulp.task('rev',()=>{
-  return gulp.src(['rev/*json','dist/index.html', 'dist/en.html'])
+  return gulp.src(['rev/**/*json','dist/*.html'])
     .pipe(revCollector())
     .pipe(gulp.dest('dist'));
 });
+
+// gulp.task('reven',()=>{
+//   return gulp.src(['rev/*json','dist/index.html'])
+//     .pipe(revCollector())
+//     .pipe(gulp.dest('dist'));
+// })
 
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
@@ -120,7 +126,7 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', /*'dist'*/]));
+gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
   runSequence(['clean','wiredep'], ['styles', 'scripts', 'fonts'], () => {
@@ -229,7 +235,7 @@ gulp.task('revjs',()=>{
     .pipe(rev())
     .pipe(gulp.dest('dist/scripts'))
     .pipe(rev.manifest())
-    .pipe(gulp.dest('rev'));
+    .pipe(gulp.dest('rev/scripts'));
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
@@ -239,6 +245,6 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 gulp.task('default', () => {
   return new Promise(resolve => {
     dev = false;
-    runSequence(['clean', 'wiredep'], 'build', 'inline', 'rev', 'revjs', 'rev', resolve);
+    runSequence(['clean', 'wiredep'], 'build', 'inline', 'revjs', 'rev', resolve);
   });
 });
