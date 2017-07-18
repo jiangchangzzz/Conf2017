@@ -2,9 +2,9 @@
 @import './reset.scss';
 @import './sprite.scss';
 @import './commen.scss';
-
 @import './section-partner.scss';
 @import './section-schedule.scss';
+@import './photo-modal.scss';
 
 .wrap--fullpage {
   position: fixed;
@@ -435,7 +435,7 @@
         img{
             width: 100%;
             height: 100%;
-            border: 5px solid #fff;
+            border: 2px solid #fff;
             box-sizing: border-box;
             &:hover{
                 box-shadow: rgba(0,0,0,0.25) 0 14px 45px,
@@ -526,6 +526,10 @@
         }
         a{
             color:#4de577;
+            
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -554,7 +558,11 @@
         p{
             margin-bottom: 50px;
             a{
-                color:#4de577;
+                color:#dd812f;
+
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }

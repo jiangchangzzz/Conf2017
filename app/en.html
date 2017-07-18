@@ -37,7 +37,7 @@
 
 <body>
   <!--[if IE]>
-      <p class="browserupgrade">您正在使用<strong>过时的</strong>浏览器. 请<a href="http://browsehappy.com/">升级您的浏览器</a>来提升您的用户体验。</p>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
   <div class="loading-wrap wrap--fullpage" id="loading">
@@ -59,10 +59,10 @@
     </div>
     <nav class="header-nav clearfix" id="header-nav">
       <a href="#home" class="active link">Home</a>
-      <!-- <a href="#schedule">日程</a> -->
+      <!-- <a href="#schedule" class="link">日程</a> -->
       <a href="#lecturer" class="link">Lecturer</a>
       <a href="#sponsor" class="link">Sponsor</a>
-      <!-- <a href="#information">往届回顾</a> -->
+      <!-- <a href="#information" class="link">往届回顾</a> -->
       <a href="#about" class="link">About</a>
       <a href="#partner" class="link">Partner</a>
     </nav>
@@ -482,7 +482,7 @@
             <h2 style="font-size: 40px">
               Be<strong>Lecturer</strong>
             </h2>
-            <p>成为 讲师<i class="triangle"></i></p>
+            <p style="padding-left: 8px;">IMWeb Conf 2017<i class="triangle"></i></p>
           </div>
           <a href="https://wj.qq.com/s/1424890/8a62" target="_blank">
             <div class="block-enter" style="padding-left: 40px;">Apply</div>
@@ -513,13 +513,13 @@
     </div>
 
     <div class="section section-sponsor" data-url="/images/home-bg2.jpg">
-      <div class="sponsor-container clearfix">
+      <div class="sponsor-container">
         <div class="sponsor second-block fade-in-right">
           <div class="block-text">
             <h2>
               Be<strong>Sponsor</strong>
             </h2>
-            <p style="padding-left: 8px;">成为 赞助商<i class="triangle"></i></p>
+            <p style="padding-left: 8px;">IMWeb Conf 2017<i class="triangle"></i></p>
           </div>
           <a href="/images/赞助方案.pdf" target="_blank">
             <div class="block-enter">Sponsor</div>
@@ -540,7 +540,7 @@
             Your sponsorship will be used to cover the venue leasing,accommodation and transportation allowance for lectures and so on.
             It will greatly help us to organize this conference and bring better content to the audience.
           </p>
-          <p>You can click to view <a href="/images/赞助方案.pdf" target="_blank">detailed program of the sponsorship and cooperation</a>,
+          <p>You can <a href="/images/赞助方案.pdf" target="_blank">click</a> to view detailed program of the sponsorship and cooperation,
             we are looking forward you to contacting us and exploring ways to achieve win-win cooperation.
           </p>
         </div>
@@ -621,16 +621,16 @@
         </div>
         <div class="thrid-img clearfix">
           <div class="img-box">
-            <img src="/images/participant-photo1-web.jpg" alt="参与者照片">
+            <img src="/images/participant-photo1-web.jpg" alt="Participator1" data-photo>
           </div>
           <div class="img-box">
-            <img src="/images/participant-photo5-web.jpg" alt="参与者照片">
+            <img src="/images/participant-photo5-web.jpg" alt="Participator2" data-photo>
           </div>
           <div class="img-box">
-            <img src="/images/participant-photo3-web.jpg" alt="参与者照片">
+            <img src="/images/participant-photo3-web.jpg" alt="Participator3" data-photo>
           </div>
           <div class="img-box">
-            <img src="/images/participant-photo4-web.jpg" alt="参与者照片">
+            <img src="/images/participant-photo4-web.jpg" alt="Participator4" data-photo>
           </div>
         </div>
       </div>
@@ -657,19 +657,19 @@
             <ul>
               <li><a href="https://ke.qq.com/" target="_blank">Tencent's Class</a></li>
             </ul>
-          </div>
-          <div class="footer-content">
-            <p>Cooperation：</p>
-            <ul>
-              <li><a href="mailto:vienwu@tencent.com" target="_blank">Content Partner</a></li>
-              <li><a href="https://wj.qq.com/s/1424890/8a62" target="_blank">Be Lecturer</a></li>
-              <li><a href="/images/赞助方案.pdf" target="_blank">Be Sponsor</a></li>
-              <li><a href="mailto:vienwu@tencent.com" target="_blank">Media Partner</a></li>
-            </ul>
-          </div>
-          <p class="footer-copyright">Copyright © 2017 Tencent. All Rights Reserved</p>
         </div>
+        <div class="footer-content">
+          <p>Cooperation：</p>
+          <ul>
+            <li><a href="mailto:vienwu@tencent.com" target="_blank">Content Partner</a></li>
+            <li><a href="https://wj.qq.com/s/1424890/8a62" target="_blank">Be Lecturer</a></li>
+            <li><a href="/images/赞助方案.pdf" target="_blank">Be Sponsor</a></li>
+            <li><a href="mailto:vienwu@tencent.com" target="_blank">Media Partner</a></li>
+          </ul>
+        </div>
+        <p class="footer-copyright">Copyright © 2017 Tencent. All Rights Reserved</p>
       </div>
+    </div>
     </div>
   </main>
 
@@ -690,7 +690,18 @@
     </div>
   </div>
 
-
+  <div class="photo" data-photoModal style="display: none">
+    <div class="photo-mask"></div>
+    <div class="photo-content">
+      <div class="content-header clearfix">
+        <h3 class="content-title"></h3>
+        <div class="content-cancel">×</div>
+      </div>
+      <div class="content-box">
+        <img>
+      </div>
+    </div>
+  </div>
 
   <!-- build:js scripts/vendor.js -->
   <script src="scripts/anm.js"></script>
@@ -702,6 +713,7 @@
   <!-- endbuild -->
 
   <!-- build:js scripts/en-main.js -->
+  <!--<script src="scripts/photoModal.js"></script>-->
   <script src="scripts/english.js"></script>
   <script src="scripts/common.js"></script>
   <!-- endbuild -->
