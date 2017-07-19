@@ -242,17 +242,13 @@
         color: #d1bcb5;
         flex-grow: 1;
         cursor: pointer;
-        opacity: 0.8;
-
-        &:hover{
-            opacity: 1;
-            color: #fff;
-        }
+        opacity: 0.5;
     }
 
     li.active{
         color: #fff;
         opacity: 1;
+        box-shadow: 4px 4px 4px #666;
     }
 
     li:nth-child(1){
