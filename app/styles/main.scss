@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3000;
+  z-index: 6000;
 }
 
 .loading-center {
@@ -90,7 +90,8 @@
     text-align: center;
 
     .first-container{
-        margin-top: 200px;
+        margin-top: 240px;
+        margin-bottom: 10px;
     }
 
     .scene {
@@ -222,14 +223,14 @@
     }
 
     .first-title{
-        margin-bottom: 80px;
+        margin-bottom: 100px;
         font-size: 96px;
         font-weight: bold;
         word-spacing: 26px;
     }
 
     .first-time{
-        margin-bottom: 270px;
+        margin-bottom: 74px;
         font-size: 24px;
         font-weight: bold;
 
@@ -256,6 +257,7 @@
 
     .first-btn-group{
         text-align: center;
+        margin-bottom: 144px;
 
         a{
             display: inline-block;
@@ -274,12 +276,43 @@
             }
         }
 
+        .bird-btn{
+            @include sprite($btn-xxznp-normal);
+
+            &:hover{
+                @include sprite($btn-xxznp-hover);
+            }
+        }
+
         .offline-btn{
             @include sprite($btn-xxptp-normal);
 
             &:hover{
                 @include sprite($btn-xxptp-hover);
             }
+        }
+    }
+
+    .first-info{
+        font-size: 14px;
+        text-align: center;
+
+        .info-price{
+            @include sprite($bg-tips);
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            padding-top: 6px;
+            color: #06D1F8;
+
+            .point{
+                margin: 0 20px;
+                font-size: 18px;
+            }
+        }
+
+        .info-right{
+            color: #0C9CB8;
         }
     }
 }
@@ -360,6 +393,7 @@
         // }
 
         h2{
+            min-width: 212px;
             padding-bottom: 18px;
             color: #fff;
             font-size: 48px;

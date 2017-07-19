@@ -205,7 +205,7 @@ gulp.task('sprite',()=>{
     .pipe($.spritesmith({
       imgName: 'images/sprite.png',
       cssName: 'styles/sprite.scss',
-      padding: 5,
+      padding: 8,
       algorithm: 'binary-tree'
     }))
     .pipe(gulp.dest('app/'))
