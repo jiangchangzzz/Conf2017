@@ -74,7 +74,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 5000;
 }
 
 .section{
@@ -254,16 +254,33 @@
         }
     }
 
-    .first-enter{
-        @extend .first-block;
-        @include sprite($enter-block);
-        display: none;
-    }
+    .first-btn-group{
+        text-align: center;
 
-    .first-sellout{
-        @extend .first-block;
-        @include sprite($sellout-block);
-        display: none;
+        a{
+            display: inline-block;
+            position: relative;
+            width: 248px;
+            height: 69px;
+            z-index: 5000;
+        }
+
+        .online-btn{
+            @include sprite($btn-xszbp-normal);
+            margin-right: 27px;
+
+            &:hover{
+                @include sprite($btn-xszbp-hover);
+            }
+        }
+
+        .offline-btn{
+            @include sprite($btn-xxptp-normal);
+
+            &:hover{
+                @include sprite($btn-xxptp-hover);
+            }
+        }
     }
 }
 
