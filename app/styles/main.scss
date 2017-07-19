@@ -257,7 +257,7 @@
 
     .first-btn-group{
         text-align: center;
-        margin-bottom: 144px;
+        margin-bottom: 100px;
 
         a{
             display: inline-block;
@@ -313,6 +313,12 @@
 
         .info-right{
             color: #0C9CB8;
+            text-align: left;
+            width: 420px;
+            margin: 0px auto;
+            background: rgba(0,0,0,0.1);
+            padding: 10px;
+            line-height: 20px;
         }
     }
 }
