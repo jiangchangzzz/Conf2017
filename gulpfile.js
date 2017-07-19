@@ -9,6 +9,7 @@ const rev=require('gulp-rev');
 const revCollector=require('gulp-rev-collector');
 const qiniu=require('gulp-qiniu');
 const prefix=require('gulp-prefix');
+const path=require('path');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -24,7 +25,7 @@ gulp.task('styles', () => {
     .pipe($.sass.sync({
       outputStyle: 'expanded',
       precision: 10,
-      includePaths: ['.']
+      includePaths: [path.join(__dirname,'app/styles')]
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.if(dev, $.sourcemaps.write()))

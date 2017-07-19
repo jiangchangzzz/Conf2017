@@ -45,7 +45,7 @@ $(document).ready(function(){
   }
 
   //点击切换tab
-  $('#place-list').delegate('li', 'click', function() {
+  $('#place-list').delegate('li', 'mousemove', function() {
     $(this).siblings('li').removeClass('active');
     $(this).addClass('active');
 
