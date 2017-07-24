@@ -173,14 +173,18 @@
     display: none;
     position: absolute;
     top: 100%;
-    width: 350px;
-    margin-top: 6px;
-    padding: 22px;
-    background-color: #484859;
-    text-align: left;
-    border: 1px solid #7b7b97;
-    border-radius: 8px;
+    padding-top: 6px;
     z-index: 1;
+
+    &-container{
+        position: relative;
+        width: 350px;
+        padding: 22px;
+        background-color: #484859;
+        text-align: left;
+        border: 1px solid #7b7b97;
+        border-radius: 8px;
+    }
 
     &.left{
         left: 0;
@@ -212,7 +216,7 @@
     &:after{
         content: '';
         position: absolute;
-        top: -16px;
+        top: -9px;
         display: block;
         width: 0;
         height: 0;
