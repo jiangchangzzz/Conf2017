@@ -1,3 +1,5 @@
+@import './partner.scss';
+
 .section-partner{
 
     .partner-container{
@@ -11,7 +13,7 @@
         width: 100%;
         height: 70px;
         margin-top: 120px;
-        margin-bottom: 170px;
+        margin-bottom: 40px;
         line-height: 70px;
         color: #fff;
         font-size: 30px;
@@ -43,11 +45,11 @@
 
 .partner-list{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     max-width: 1000px;
     width: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     padding: 20px;   //为整体加上一个外边距
     box-sizing: border-box;
 
@@ -60,8 +62,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-basis: 25%;
+        margin-bottom: 20px;
         height: 120px;
-        padding: 10px;
         box-sizing: border-box;
 
         @media (max-width: $screen-sm-max){
@@ -71,31 +74,36 @@
 
     i{
         display: block;
-    }
 
-    .partner1{
-        @include sprite($partner1);
-    }
+        &.ketang{
+            @include sprite($ketang);
+        }
 
-    /*.partner2{
-        @include sprite($partner2);
-    }
+         &.menggongchang{
+            @include sprite($menggongchang);
+        }
 
-    .partner3{
-        @include sprite($partner3);
-    }
+         &.kaiyuan{
+            @include sprite($kaiyuan);
+        }
 
-    .partner4{
-        @include sprite($partner4);
-    }
+        &.segmentfault{
+            @include sprite($segmentfault);
+        }
 
-    .partner5{
-        @include sprite($partner5);
-    }
+        &.w3cplus{
+            @include sprite($w3cplus);
+        }
 
-    .partner6{
-        @include sprite($partner6);
-    }*/
+        &.zaoduke{
+            @include sprite($zaoduke);
+        }
+
+        &.juejin{
+            @include sprite($juejin);
+        }
+    }
+    
 }
 
 .partner-footer{

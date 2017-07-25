@@ -212,6 +212,18 @@ gulp.task('sprite',()=>{
     .pipe(gulp.dest('app/'))
 });
 
+//生成合作伙伴雪碧图
+gulp.task('partner',()=>{
+  return gulp.src('app/images/partner/*.png')
+    .pipe($.spritesmith({
+      imgName: 'images/partner.png',
+      cssName: 'styles/partner.scss',
+      padding: 8,
+      algorithm: 'binary-tree'
+    }))
+    .pipe(gulp.dest('app/'))
+});
+
 //内联css
 gulp.task('inline',()=>{
   return gulp.src(htmlPath)

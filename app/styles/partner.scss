@@ -1,0 +1,156 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$juejin-name: 'juejin';
+$juejin-x: 184px;
+$juejin-y: 154px;
+$juejin-offset-x: -184px;
+$juejin-offset-y: -154px;
+$juejin-width: 140px;
+$juejin-height: 50px;
+$juejin-total-width: 340px;
+$juejin-total-height: 292px;
+$juejin-image: '../images/partner.png';
+$juejin: (184px, 154px, -184px, -154px, 140px, 50px, 340px, 292px, '../images/partner.png', 'juejin', );
+$kaiyuan-name: 'kaiyuan';
+$kaiyuan-x: 158px;
+$kaiyuan-y: 0px;
+$kaiyuan-offset-x: -158px;
+$kaiyuan-offset-y: 0px;
+$kaiyuan-width: 182px;
+$kaiyuan-height: 50px;
+$kaiyuan-total-width: 340px;
+$kaiyuan-total-height: 292px;
+$kaiyuan-image: '../images/partner.png';
+$kaiyuan: (158px, 0px, -158px, 0px, 182px, 50px, 340px, 292px, '../images/partner.png', 'kaiyuan', );
+$ketang-name: 'ketang';
+$ketang-x: 0px;
+$ketang-y: 96px;
+$ketang-offset-x: 0px;
+$ketang-offset-y: -96px;
+$ketang-width: 180px;
+$ketang-height: 50px;
+$ketang-total-width: 340px;
+$ketang-total-height: 292px;
+$ketang-image: '../images/partner.png';
+$ketang: (0px, 96px, 0px, -96px, 180px, 50px, 340px, 292px, '../images/partner.png', 'ketang', );
+$menggongchang-name: 'menggongchang';
+$menggongchang-x: 188px;
+$menggongchang-y: 96px;
+$menggongchang-offset-x: -188px;
+$menggongchang-offset-y: -96px;
+$menggongchang-width: 152px;
+$menggongchang-height: 50px;
+$menggongchang-total-width: 340px;
+$menggongchang-total-height: 292px;
+$menggongchang-image: '../images/partner.png';
+$menggongchang: (188px, 96px, -188px, -96px, 152px, 50px, 340px, 292px, '../images/partner.png', 'menggongchang', );
+$segmentfault-name: 'segmentfault';
+$segmentfault-x: 0px;
+$segmentfault-y: 154px;
+$segmentfault-offset-x: 0px;
+$segmentfault-offset-y: -154px;
+$segmentfault-width: 176px;
+$segmentfault-height: 50px;
+$segmentfault-total-width: 340px;
+$segmentfault-total-height: 292px;
+$segmentfault-image: '../images/partner.png';
+$segmentfault: (0px, 154px, 0px, -154px, 176px, 50px, 340px, 292px, '../images/partner.png', 'segmentfault', );
+$w3cplus-name: 'w3cplus';
+$w3cplus-x: 0px;
+$w3cplus-y: 0px;
+$w3cplus-offset-x: 0px;
+$w3cplus-offset-y: 0px;
+$w3cplus-width: 150px;
+$w3cplus-height: 88px;
+$w3cplus-total-width: 340px;
+$w3cplus-total-height: 292px;
+$w3cplus-image: '../images/partner.png';
+$w3cplus: (0px, 0px, 0px, 0px, 150px, 88px, 340px, 292px, '../images/partner.png', 'w3cplus', );
+$zaoduke-name: 'zaoduke';
+$zaoduke-x: 0px;
+$zaoduke-y: 212px;
+$zaoduke-offset-x: 0px;
+$zaoduke-offset-y: -212px;
+$zaoduke-width: 97px;
+$zaoduke-height: 80px;
+$zaoduke-total-width: 340px;
+$zaoduke-total-height: 292px;
+$zaoduke-image: '../images/partner.png';
+$zaoduke: (0px, 212px, 0px, -212px, 97px, 80px, 340px, 292px, '../images/partner.png', 'zaoduke', );
+$spritesheet-width: 340px;
+$spritesheet-height: 292px;
+$spritesheet-image: '../images/partner.png';
+$spritesheet-sprites: ($juejin, $kaiyuan, $ketang, $menggongchang, $segmentfault, $w3cplus, $zaoduke, );
+$spritesheet: (340px, 292px, '../images/partner.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
