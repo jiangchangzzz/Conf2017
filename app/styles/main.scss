@@ -89,6 +89,9 @@
     text-align: center;
 
     .first-container{
+        width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 240px;
         margin-bottom: 10px;
     }
@@ -109,115 +112,113 @@
       }
       span{
         /*border: 1px solid #ccc;*/
-        /*text-shadow: 1px 1px 1px #fff;*/
-        @media (min-width: $screen-sm-max) {
-        animation: fadeInUp 2.0s;
-        opacity: 0.4;
-      }
+        text-shadow: 1px 1px 1px #fff;
+        opacity: 0.2;
       }
       .p_1 {
         position: absolute;
         top: 200px;
         left: 230px;
         font-size: 28px;
-        color: #FFFF66;
+        color: #fff;
       }
       .p_2 {
         position: absolute;
         top: 900px;
         left: 930px;
         font-size: 32px;
-        color: #009966;
+        color: #fff;
       }
       .p_3 {
         position: absolute;
         top: 100px;
         left: 1230px;
         font-size: 26px;
-        color: #CC0066;
+        color: #fff;
       }
       .p_4 {
         position: absolute;
         top: 90px;
         left: 700px;
         font-size: 30px;
-        color: #0099CC;
+        color: #fff;
       }
       .p_5 {
         position: absolute;
         top: 500px;
         left: 1650px;
         font-size: 28px;
-        color: #FF6600;
+        color: #fff;
       }
       .p_6 {
         position: absolute;
         top: 150px;
         left: 1600px;
         font-size: 36px;
-        color: #CC6600;
+        color: #fff;
       }
       .p_7 {
         position: absolute;
         top: 800px;
         left: 1530px;
         font-size: 32px;
-        color: #009933;
+        color: #fff;
       }
       .p_8 {
         position: absolute;
         top: 400px;
         left: 300px;
         font-size: 32px;
-        color: #FF9900;
+        color: #fff;
       }
       .p_9 {
         position: absolute;
         top: 90px;
         left: 930px;
         font-size: 24px;
+        color: #fff;
       }
       .p_10 {
         position: absolute;
         top: 300px;
         left: 1530px;
         font-size: 28px;
-        color: #FFFF99;
+        color: #fff;
       }
       .p_11 {
         position: absolute;
         top: 930px;
         left: 600px;
         font-size: 30px;
-        color: #FF6600;
+        color: #fff;
       }
       .p_12 {
         position: absolute;
         top: 500px;
         left: 400px;
         font-size: 36px;
-        color: #FF9900;
+        color: #fff;
       }
       .p_13 {
         position: absolute;
         top: 930px;
         left: 1600px;
         font-size: 28px;
-         olor: #0099CC;
+         olor: #fff;
       }
       .p_14 {
         position: absolute;
         top: 850px;
         left: 300px;
         font-size: 28px;
-        color: #CC0066;
+        color: #fff;
       }
       .p_15 {
         position: absolute;
         top: 200px;
         left: 250px;
         font-size: 36px;
-        color: #FFFF66;
+        color: #fff;
       }
     }
 

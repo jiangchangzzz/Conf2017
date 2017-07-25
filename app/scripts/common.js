@@ -1,42 +1,30 @@
 'use strict';
 
-$(document).ready(function(){
+$(document).ready(function () {
+  
   //全屏滚动效果
-  if ($(window).width() > 768) {
-    $('#fullpage').fullpage({
-      anchors: anchors,
-      navigation: true,
-      navigationPosition: 'right',
-      afterLoad: function(anchorLink, index) {
-        activeLink($('#header-nav').children().eq(index - 1));
-      },
-      scrollOverflow: true
-    });
-  } else {
-    $('#fullpage').fullpage({
-      anchors: anchors,
-      navigation: true,
-      navigationPosition: 'right',
-      loopBottom: true,
-      responsiveWidth: 768,
-      afterLoad: function(anchorLink, index) {
-        activeLink($('#header-nav').children().eq(index - 1));
-      }
-    });
-  }
+  $('#fullpage').fullpage({
+    anchors: anchors,
+    navigation: true,
+    navigationPosition: 'right',
+    afterLoad: function (anchorLink, index) {
+      activeLink($('#header-nav').children().eq(index - 1));
+    },
+    scrollOverflow: true
+  });
 
   //小屏幕下显示隐藏菜单
-  $('#header-menu').click(function() {
+  $('#header-menu').click(function () {
     $('#header-nav').toggleClass('show');
   });
 
   //点击导航显示选中效果
-  $('#header-nav').delegate('a', 'click', function() {
+  $('#header-nav').delegate('a', 'click', function () {
     activeLink($(this));
   });
 
-  /*var scene=$('#scene').get(0);
-  var parallax=new Parallax(scene);*/
+  var scene=$('#scene').get(0);
+  var parallax=new Parallax(scene);
 
   //激活导航栏链接
   function activeLink(ele) {
@@ -45,7 +33,7 @@ $(document).ready(function(){
   }
 
   //点击切换tab
-  $('#place-list').delegate('li', 'mousemove', function() {
+  $('#place-list').delegate('li', 'mousemove', function () {
     $(this).siblings('li').removeClass('active');
     $(this).addClass('active');
 
@@ -61,7 +49,7 @@ $(document).ready(function(){
     let url = imgList.eq(i).data('url');
 
     let img = new Image();
-    img.onload = function() {
+    img.onload = function () {
       imgList.eq(i).css('background-image', 'url(' + url + ')');
       imgNum--;
       if (imgNum === 0) {
@@ -79,7 +67,7 @@ $(document).ready(function(){
 
   Anm.init(document.getElementById('scene-canvas'));
   //设置一个超时，如果时间内没有加载完图片，也进入页面
-  setTimeout(function() {
+  setTimeout(function () {
     $('#loading').hide();
   }, 5000);
 });
