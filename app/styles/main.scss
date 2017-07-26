@@ -50,6 +50,19 @@
 .section.active{
     .fade-in-up{
         @media (min-width: $screen-sm-max){
+            animation: fadeInUp 1s;
+        }
+    }
+
+    .fade-in-up-second{
+        @media (min-width: $screen-sm-max){
+            animation: fadeInUp 1.25s;
+        }
+    }
+
+    .fade-in-up-third{
+        animation-fill-mode: backwards;
+        @media (min-width: $screen-sm-max){
             animation: fadeInUp 1.5s;
         }
     }
@@ -57,6 +70,18 @@
     .fade-in-left{
         @media (min-width: $screen-sm-max){
             animation: fadeInLeft 1.5s;
+        }
+    }
+
+    .fade-in-left-second{
+        @media (min-width: $screen-sm-max){
+            animation: fadeInLeft 1.5s 200ms;
+        }
+    }
+
+    .fade-in-left-thrid{
+        @media (min-width: $screen-sm-max){
+            animation: fadeInLeft 1.5s 400ms;
         }
     }
 
@@ -359,7 +384,7 @@
         }
     }
 
-    &.sponsor{
+    &.cooperation{
         padding: 112px 180px 0 10px;
         background-image: url(#{$cdn}/images/sponsor-bg.png);
         background-position: center center;
@@ -592,9 +617,9 @@
 }
 
 /* 赞助商页面 */
-.section-sponsor{
+.section-cooperation{
 
-    .sponsor-container{
+    .cooperation-container{
         display: flex;
         justify-content: space-between;
         flex-direction: row-reverse;
@@ -605,7 +630,7 @@
         box-sizing: border-box;
     }
 
-    .sponsor-text{
+    .cooperation-text{
         max-width: 742px;
         padding: 20px;
         color: #fff;
@@ -822,6 +847,18 @@
     to{
         opacity: 1;
         transform: none;
+    }
+}
+
+@keyframes scaleOut{
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
