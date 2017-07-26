@@ -10,7 +10,8 @@ $(document).ready(function () {
     afterLoad: function (anchorLink, index) {
       activeLink($('#header-nav').children().eq(index - 1));
     },
-    scrollOverflow: true
+    scrollOverflow: true,
+    lazyLoading: false
   });
 
   //小屏幕下显示隐藏菜单
@@ -22,9 +23,6 @@ $(document).ready(function () {
   $('#header-nav').delegate('a', 'click', function () {
     activeLink($(this));
   });
-
-  var scene=$('#scene').get(0);
-  var parallax=new Parallax(scene);
 
   //激活导航栏链接
   function activeLink(ele) {
