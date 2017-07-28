@@ -102,6 +102,10 @@
         &.juejin{
             @include sprite($juejin);
         }
+
+        &.offer{
+            @include sprite($offer);
+        }
     }
     
 }

@@ -53,6 +53,17 @@ $menggongchang-total-width: 340px;
 $menggongchang-total-height: 292px;
 $menggongchang-image: '../images/partner.png';
 $menggongchang: (188px, 96px, -188px, -96px, 152px, 50px, 340px, 292px, '../images/partner.png', 'menggongchang', );
+$offer-name: 'offer';
+$offer-x: 105px;
+$offer-y: 212px;
+$offer-offset-x: -105px;
+$offer-offset-y: -212px;
+$offer-width: 180px;
+$offer-height: 35px;
+$offer-total-width: 340px;
+$offer-total-height: 292px;
+$offer-image: '../images/partner.png';
+$offer: (105px, 212px, -105px, -212px, 180px, 35px, 340px, 292px, '../images/partner.png', 'offer', );
 $segmentfault-name: 'segmentfault';
 $segmentfault-x: 0px;
 $segmentfault-y: 154px;
@@ -89,7 +100,7 @@ $zaoduke: (0px, 212px, 0px, -212px, 97px, 80px, 340px, 292px, '../images/partner
 $spritesheet-width: 340px;
 $spritesheet-height: 292px;
 $spritesheet-image: '../images/partner.png';
-$spritesheet-sprites: ($juejin, $kaiyuan, $ketang, $menggongchang, $segmentfault, $w3cplus, $zaoduke, );
+$spritesheet-sprites: ($juejin, $kaiyuan, $ketang, $menggongchang, $offer, $segmentfault, $w3cplus, $zaoduke, );
 $spritesheet: (340px, 292px, '../images/partner.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
