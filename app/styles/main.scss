@@ -653,7 +653,6 @@
 /* 资讯页面 */
 .section-information{
     .section-title{
-        padding-top: 40px;
         margin-bottom: 0;
 
         @media (max-width: $screen-sm-max){
@@ -664,7 +663,7 @@
     .information-container{
         width: 100%;
         max-width: 1200px;
-        margin: 80px auto 0 auto;
+        margin: 100px auto 0 auto;
 
         @media (max-width: $screen-sm-max){
             margin-top: 40px;
@@ -674,7 +673,7 @@
     .information-list li{
         display: flex;
         justify-content: space-between;
-        padding: 30px 0;
+        padding: 20px 0;
         border-bottom: 1px solid #8c8c9d;
 
         &:last-child{

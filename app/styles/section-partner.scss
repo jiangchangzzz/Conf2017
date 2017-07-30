@@ -6,14 +6,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 100px;
     }
 
     .partner-title{
         max-width: 1260px;
         width: 100%;
         height: 70px;
-        margin-top: 120px;
-        margin-bottom: 40px;
         line-height: 70px;
         color: #fff;
         font-size: 30px;
@@ -45,11 +44,10 @@
 
 .partner-list{
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     max-width: 1000px;
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding: 20px;   //为整体加上一个外边距
     box-sizing: border-box;
 
@@ -106,6 +104,10 @@
         &.offer{
             @include sprite($offer);
         }
+
+        &.w3cschool{
+            @include sprite($w3cschool);
+        }
     }
     
 }
@@ -116,6 +118,10 @@
     align-items: center;
     color: #cbcbcb;   
     margin-bottom: 30px;
+
+    a:hover{
+        text-decoration: underline;
+    }
 }
 
 .footer{
