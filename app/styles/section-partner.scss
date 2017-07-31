@@ -108,6 +108,10 @@
         &.w3cschool{
             @include sprite($w3cschool);
         }
+
+        &.wex5{
+            @include sprite($wex5);
+        }
     }
     
 }
