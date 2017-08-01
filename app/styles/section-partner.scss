@@ -47,7 +47,7 @@
     flex-wrap: wrap;
     max-width: 1000px;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     padding: 20px;   //为整体加上一个外边距
     box-sizing: border-box;
 
@@ -61,7 +61,7 @@
         justify-content: center;
         align-items: center;
         flex-basis: 25%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         height: 120px;
         box-sizing: border-box;
 
@@ -111,6 +111,10 @@
 
         &.wex5{
             @include sprite($wex5);
+        }
+
+        &.tuling{
+            @include sprite($tuling);
         }
     }
     
