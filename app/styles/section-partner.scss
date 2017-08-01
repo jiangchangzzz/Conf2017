@@ -116,6 +116,10 @@
         &.tuling{
             @include sprite($tuling);
         }
+
+        &.dakashuo{
+            @include sprite($dakashuo);
+        }
     }
     
 }

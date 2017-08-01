@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "gulp serve",
     "dist": "gulp",
-    "pub": "rm -rf dist && gulp && git add . && git commit -m up && git push origin master && pm2 deploy imweb"
+    "pub": "rm -rf dist && gulp && git add . && git commit -m up && git push origin master && pm2 deploy imweb",
+    "deploy": "pm2 deploy imweb"
   },
 
   "devDependencies": {
