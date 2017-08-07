@@ -72,6 +72,11 @@
 
     i{
         display: block;
+        transition: transform 500ms;
+
+        &:hover{
+            transform: translate3d(0,-10px,0);
+        }
 
         &.ketang{
             @include sprite($ketang);
