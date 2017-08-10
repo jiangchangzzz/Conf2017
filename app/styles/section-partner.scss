@@ -45,7 +45,7 @@
 .partner-list{
     display: flex;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     margin-bottom: 60px;
     padding: 20px;   //为整体加上一个外边距
@@ -60,7 +60,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-basis: 25%;
+        flex-basis: 20%;
         margin-bottom: 10px;
         height: 120px;
         box-sizing: border-box;
@@ -125,6 +125,10 @@
 
         &.dakashuo{
             @include sprite($dakashuo);
+        }
+
+        &.xuanyuan{
+            @include sprite($xuanyuan);
         }
     }
     
