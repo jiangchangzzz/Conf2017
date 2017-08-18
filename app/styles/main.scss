@@ -4,6 +4,7 @@
 @import './commen.scss';
 @import './section-partner.scss';
 @import './section-schedule.scss';
+@import './clock.scss';
 
 .wrap--fullpage {
   position: fixed;
@@ -117,8 +118,8 @@
         width: 1300px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 240px;
         margin-bottom: 10px;
+        margin-top: 230px;
     }
 
     .scene {
@@ -248,14 +249,20 @@
     }
 
     .first-title{
-        margin-bottom: 100px;
+        margin-bottom: 20px;
         font-size: 96px;
         font-weight: bold;
         word-spacing: 26px;
     }
 
+    #portal{
+        font-size: 24px;
+        font-weight: bold;
+        opacity: 0;
+    }
+
     .first-time{
-        margin-bottom: 74px;
+        // margin-bottom: 79px;
         font-size: 24px;
         font-weight: bold;
 
@@ -281,14 +288,12 @@
     }
 
     .first-btn-group{
-        text-align: center;
-        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 80px;
 
-        a{
-            display: inline-block;
+        .btn{
             position: relative;
-            width: 248px;
-            height: 69px;
             z-index: 5000;
         }
 
@@ -302,6 +307,7 @@
         }
 
         .bird-btn{
+            margin-right: 27px;
             @include sprite($btn-xxznp-normal);
 
             &:hover{
@@ -310,11 +316,30 @@
         }
 
         .offline-btn{
+            margin-right: 27px;
             @include sprite($btn-xxptp-normal);
 
             &:hover{
                 @include sprite($btn-xxptp-hover);
             }
+        }
+
+        .ticket-btn{
+            margin-bottom: 4px;
+            @include sprite($ticket-btn-disabled);
+
+            &.active{
+                @include sprite($ticket-btn);
+                cursor: pointer;
+
+                &:hover{
+                    @include sprite($ticket-btn-hover);
+                }
+            }
+        }
+
+        .ticket-info{
+            color: #00ffff;
         }
     }
 
@@ -326,7 +351,6 @@
             @include sprite($bg-tips);
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 10px;
             padding-top: 6px;
             color: #06D1F8;
 

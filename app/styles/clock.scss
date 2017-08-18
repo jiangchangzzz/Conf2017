@@ -1,0 +1,126 @@
+
+.clock-block{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  width: 762px;
+  height: 179px;
+  background-image: url(/images/start-time.png);
+
+  .clock-inner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 493px;
+    transform: translate(-50%,-50%);
+    font-size: 28px;
+    font-weight: bold;
+    color: #00ffff;
+  }
+}
+
+.clock-title{
+  float: left;
+  margin-right: 18px;
+  line-height: 48px;
+}
+
+.clock {
+  float: left;
+  font-size: 32px;
+  line-height: 1.5em;
+  font-weight: bold;
+  display: inline-block;
+  height: 1.5em;
+  overflow: hidden;
+}
+
+.clock .col {
+  // background: linear-gradient(#022c4d 0%, #0686b4 50%, #022c4d 100%);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  float: left;
+  height: 100%;
+  margin: 0 1px 0 0;
+  position: relative;
+}
+
+.clock .col:last-child {
+  margin: 0;
+}
+
+.clock .col:before {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.clock span {
+  display: block;
+  width: 18px;
+  color: #fff;
+  font-weight: bold;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+.clock .item,
+.clock .per {
+  position: relative;
+  top: 0;
+  transition: top 500ms ease-out;
+}
+
+.clock .item:before {
+  content: " 0 1 2 3 4 5 6 7 8 9 ";
+}
+
+.clock .di1 {
+  top: -1.5em;
+}
+
+.clock .di2 {
+  top: -3em;
+}
+
+.clock .di3 {
+  top: -4.5em;
+}
+
+.clock .di4 {
+  top: -6em;
+}
+
+.clock .di5 {
+  top: -7.5em;
+}
+
+.clock .di6 {
+  top: -9em;
+}
+
+.clock .di7 {
+  top: -10.5em;
+}
+
+.clock .di8 {
+  top: -12em;
+}
+
+.clock .di9 {
+  top: -13.5em;
+}
+
+.clock .per {
+  width: auto;
+  margin-right: 18px;
+  color: #00ffff;
+  font-family: 'Microsoft YaHei';
+  font-size: 28px;
+  font-weight: bold;
+}

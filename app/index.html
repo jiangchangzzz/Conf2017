@@ -68,6 +68,7 @@
       <a href="#partner" class="link">合作伙伴</a>
     </nav>
     <div class="header-en">
+      <p class="link" id="level-block" style="display: none"></p>
       <a href="/en.html" class="link">English</a>
     </div>
   </header>
@@ -76,7 +77,7 @@
   <main id="fullpage">
     <div class="section section-first" id="homeBackground" data-url="/images/home-bg6.jpg">
       <canvas id="scene-canvas"></canvas>
-      <div id="scene" class="scene" style="display: none;">
+      <!-- <div id="scene" class="scene" style="display: none;">
         <div class="font_ct layer" data-depth="0.80">
           <span class="p_1">Node</span>
         </div>
@@ -119,15 +120,67 @@
         <div class="font_ct layer" data-depth="1.0">
           <span class="p_14">redux</span>
         </div>
-      </div>
+      </div> -->
       <div class="first-container fade-in-up">
         <h1 class="first-title">
           IMWebConf 2017
         </h1>
+        <p id="portal">33c7d07150fd451c2892564b8d98569823d0cc57</p>
         <p class="first-time">2017.09.16 @ 深圳科兴国际会议中心</p>
+
+        <!-- clock -->
+        <div class="clock-block">
+          <div class="clock-inner clearfix">
+            <p class="clock-title">距离开幕</p>
+            <div class='clock'>
+              <div class='col'>
+                <span class='item d d1'></span>
+              </div>
+              <div class='col'>
+                <span class='item d d2'></span>
+              </div>
+              <div class='col'>
+                <span class='per'>天</span>
+              </div>
+              <div class='col'>
+                <span class='item h h1'></span>
+              </div>
+              <div class='col'>
+                <span class='item h h2'></span>
+              </div>
+              <div class='col'>
+                <span class='per'>时</span>
+              </div>
+              <div class='col'>
+                <span class='item m m1'></span>
+              </div>
+              <div class='col'>
+                <span class='item m m2'></span>
+              </div>
+              <div class='col'>
+                <span class='per'>分</span>
+              </div>
+              <div class='col'>
+                <span class='item s s1'></span>
+              </div>
+              <div class='col'>
+                <span class='item s s2'></span>
+              </div>
+              <div class='col'>
+                <span class='per'>秒</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="first-btn-group">
-          <a href="https://ke.qq.com/course/226007#term_id=0&tuin=996baed2" target="_blank" class="online-btn"></a>
-          <a href="https://ke.qq.com/course/225949#tuin=996baed2" target="_blank" class="bird-btn"></a>
+          <a href="https://ke.qq.com/course/226007#term_id=0&tuin=996baed2" target="_blank" class="btn online-btn"></a>
+          <a href="https://ke.qq.com/course/225949#tuin=996baed2" target="_blank" class="btn bird-btn"></a>
+          <div class="ticket-block">
+            <div class="btn ticket-btn"></div>
+            <p class="ticket-info">每周五14:00开始抢劵</p>
+            <p class="ticket-info" id="book-info">服务器繁忙，请稍候重试</p>
+          </div>
           <!--<a href="#" target="_blank" class="offline-btn"></a>-->
         </div>
         <div class="first-info">
@@ -161,7 +214,7 @@
             <div class="list-right">
               <div class="info">
                 <div class="info-text">
-                  <h3>Philippe Le Hégaret<span>（W3C技术产品总经理）</span></h3>
+                  <h3 data-portal="4982ef4289d724854f48ddbffb75c31997bed2cb">Philippe Le Hégaret<span>（W3C技术产品总经理）</span></h3>
                   <p>Now and the Future</p>
                 </div>
                 <div class="pop right">
@@ -217,10 +270,7 @@
                     <h3>如何建立 Web 前端性能评估体系</h3>
                     <p class="pop-lectuer">林子杰，阿里巴巴前端开发专家，UC 浏览器内核前端负责人，UC 内核发布知乎专栏运营者</p>
                     <p class="pop-content">
-                      本主题主要从浏览器内核在各业务的前端性能优化工作的实践积累，阐述如何建立 Web 前端性能评估体系：<br/> 
-                      1. 前端性能优化最佳实践若干案例介绍（UC 各自有业务如信息流、自媒体、营销活动、神马搜索等）；<br/>
-                      2. 从内核和前端开发角度，分别来看前端性能优化这项工作；<br/>
-                      3. 如何根据不同业务的特点，建立适合业务的前端性能评估体系
+                      本主题主要从浏览器内核在各业务的前端性能优化工作的实践积累，阐述如何建立 Web 前端性能评估体系：<br/> 1. 前端性能优化最佳实践若干案例介绍（UC 各自有业务如信息流、自媒体、营销活动、神马搜索等）；<br/>                      2. 从内核和前端开发角度，分别来看前端性能优化这项工作；<br/> 3. 如何根据不同业务的特点，建立适合业务的前端性能评估体系
                     </p>
                   </div>
                 </div>
@@ -232,7 +282,7 @@
             <div class="list-left">
               <div class="info left">
                 <div class="info-text">
-                  <h3>Limin zhu<span>（微软TypeScript专家）</span></h3>
+                  <h3 class="limin">Limin zhu<span>（微软TypeScript专家）</span></h3>
                   <p>TypeScript:高效可扩展的JS开发体验</p>
                 </div>
                 <div class="pop left">
@@ -472,7 +522,7 @@
                         <h3>张成文<span>（前IMWeb团队成员）</span></h3>
                         <p>React组件的运行质量监控方案</p>
                       </div>
-                      <img class="info-img" src="./images/speaker/ouven.png" alt="讲师头像">
+                      <img class="info-img" id="ouven" src="./images/speaker/ouven.png" alt="讲师头像">
                       <div class="pop right">
                         <div class="pop-container">
                           <h3>React组件的运行质量监控方案</h3>
@@ -583,7 +633,7 @@
                   <div class="list-right">
                     <div class="info">
                       <div class="info-text">
-                        <h3>陈映平<span>（云汉金融科技前端负责人）</span></h3>
+                        <h3 secret="d9ac5beeb86610e234f5d7839405a6122173716a">陈映平<span>（云汉金融科技前端负责人）</span></h3>
                         <p>WebAssembly：面向未来的web开发</p>
                       </div>
                       <img class="info-img" src="./images/speaker/casper.png" alt="讲师头像">
@@ -821,6 +871,8 @@
           <li><a href="http://www.ituring.com.cn/" target="_blank"><i class="tuling"></i></a></li>
           <li><a href="http://www.itdks.com/" target="_blank"><i class="dakashuo"></i></a></li>
           <li><a href="http://xycq.qq.com/" target="_blank"><i class="xuanyuan"></i></a></li>
+          <li><a href="https://fequan.com/" target="_blank"><i class="qianduanquan"></i></a></li>
+          <li><a href="http://wetest.qq.com/?fom=coop_imweb2017" target="_blank"><i class="wetest"></i></a></li>
         </ul>
         <div class="partner-footer">
           <div class="footer-qr">
@@ -865,7 +917,7 @@
     </div>
   </div>
 
-  <div class="photo" data-photoModal style="display: none">
+  <!-- <div class="photo" data-photoModal style="display: none">
     <div class="photo-mask"></div>
     <div class="photo-content">
       <div class="content-header clearfix">
@@ -878,9 +930,41 @@
         <div class="img-next"></div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-
+  <!-- <div class="modal" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>模态框</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form">
+          <div class="form-group">
+            <label class="control-label">姓名：</label>
+            <div>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">联系方式：</label>
+            <div>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>邮箱：</label>
+            <div>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn-submit">提 交</button>
+        <button type="button" class="btn-cancel">取 消</button>
+      </div>
+    </div>
+  </div> -->
 
   <!-- build:js scripts/vendor.js -->
   <script src="scripts/anm.js"></script>
@@ -888,6 +972,7 @@
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/fullpage.js/dist/jquery.fullpage.js"></script>
+  <script src="/bower_components/jshashes/hashes.js"></script>
   <!-- endbower -->
   <script src="scripts/parallax.min.js"></script>
   <!-- endbuild -->
@@ -897,6 +982,9 @@
   <script src="scripts/chinese.js"></script>
   <script src="scripts/common.js"></script>
   <script src="scripts/surprise.js"></script>
+  <script src="scripts/game.js"></script>
+  <script src="scripts/clock.js"></script>
+  <script src="scripts/ticket.js"></script>
   <!-- endbuild -->
 
 
