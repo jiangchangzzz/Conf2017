@@ -325,15 +325,63 @@
         }
 
         .ticket-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 4px;
             @include sprite($ticket-btn-disabled);
 
+            .ticket-text,.ticket-text-hover{
+                display: none;
+                font-weight: bold;
+                color: #00ffff;
+                line-height: 40px;
+            }
+
+            .ticket-text{
+                font-size: 26px;
+                letter-spacing: 2px;
+            }
+
+            .ticket-text-hover{
+                font-size: 22px;
+            }
+
+            .icon-time{
+                display: block;
+                @include sprite($icon-ticket);
+            }
+
+            .icon-time-hover{
+                display: block;
+                @include sprite($icon-ticket-hover);
+            }
+
+            .ticket-option:hover{
+                color: #fff;
+                text-shadow: 0 0 10px #00ffff;
+                cursor: pointer;
+            }
+
+            .ticket-line{
+                margin: 0 4px;
+            }
+
             &.active{
                 @include sprite($ticket-btn);
-                cursor: pointer;
+
+                .ticket-text{
+                    display: flex;
+                }
 
                 &:hover{
-                    @include sprite($ticket-btn-hover);
+                    .ticket-text{
+                        display: none;
+                    }
+
+                    .ticket-text-hover{
+                        display: flex;
+                    }
                 }
             }
         }
