@@ -1,6 +1,13 @@
 'use strict';
 
 $(document).ready(function(){
+    let userAgent = navigator.userAgent; 
+    let isOpera = userAgent.indexOf('Opera') > -1;
+    let isIE = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1 && !isOpera;
+    if(isIE){
+      $('.clock-block').css('visibility','hidden');
+    }
+
     var digits = $('.item');
     var day1 = $('.d1');
     var day2 = $('.d2');

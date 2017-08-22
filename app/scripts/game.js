@@ -1,13 +1,13 @@
 'use strict';
 
 $(document).ready(function(){
-    const Sha1=new Hashes.SHA1();
+    const Sha1=new Rusha();
 
     const introduction=[
         '你好，勇士！',
         ['%c','padding:95px 139px;line-height:230px;background:url(http://7tszky.com1.z0.glb.clouddn.com/FnmSdef6lADjV_YRNLYs-3wlon_9) no-repeat;background-position: center center;'],
         ['恭喜你发现了不得了的秘密！请不要告诉任何人，偷偷踏上征程，在旅程的尽头，我们藏着一个%c神秘的宝藏','font-weight: bold;'],
-        ['想要的话，就出发吧！这里留下了一行%c古老的基础咒语%c，当它为true时，传送门将会开启！','font-weight: bold;',''],
+        ['想要的话，就出发吧！这里留下了一行 %c古老的基础咒语%c ，当它为true时，传送门将会开启！','font-weight: bold;',''],
         'window.location.search.match(/imweb-magic-land/)'
     ];
     const levels=[
@@ -16,32 +16,34 @@ $(document).ready(function(){
             text: [
                 ['欢迎来到 %cIMWebConf%c 魔法大陆。','font-weight:bold',''],
                 ['但好像出现了些意外，%c传送门%c 被隐藏起来了！它的id是”portal"，一个黑魔法让它的透明度变成了0，请帮忙驱散魔法。','font-weight: bold',''],
-                '不要忘了加上刚刚教你的基础咒语'
+                '不要忘了加上刚刚教你的基础咒语：window.location.search.match...'
             ]
         },
         {
-            url: Sha1.hex('赫卡忒'),
+            url: Sha1.digest('赫卡忒'),
             text: [
                 ['也许您听说过 %c“本地存储”魔法','font-weight: bold'],
                 '那里记录着下一个传送门的位置，快去看一下！'
 
             ],
             init: function(){
-                setStorage('portal',Sha1.hex('该亚'));
+                setStorage('portal',Sha1.digest('该亚'));
             }
         },
         {
-            url: Sha1.hex('该亚'),
+            url: Sha1.digest('该亚'),
             text: [
                 ['试炼之路需要追寻先贤的足迹，您需要向4位导师学习，找到答案。'],
                 ['%c第一位导师','font-size: 18px;font-weight: bold;line-height: 30px;'],
                 ['%c','padding:41px 41px;line-height:102px;background:url(http://7tszky.com1.z0.glb.clouddn.com/Flu9tvDKTZ7I8erUVGX5AQ9jPcqF) no-repeat;background-position: center center;'],
                 ['W3C致力于制定未来的魔法标准，也许 %cPhilippe Le Hégaret%c 先生会为您指明前路。','font-weight:bold',''],
-                ['勇士，你已经完成了将近一半的关卡，这是你应得的奖励，链接：']
+                ['勇士，你已经完成了将近一半的关卡，这是你应得的奖励，链接：'+uncompileStr('%84%DC%E8%E4%E3%ADi%5E%9A%D0%93%9F%E2%9F%91%D2%DC%9C%9F%9Ff%A4%9F%A8%E0%9C%98%CB')],
+                '扫描下面二维码，可以把你的当前关卡分享给朋友炫耀一下哦',
+                ['%c','padding:45px 45px;line-height:110px;background:url(http://7tszky.com1.z0.glb.clouddn.com/FrGvR3hgvd1dXD32gILKirGZvlnD) no-repeat;background-position: center center;']
             ]
         },
         {
-            url: Sha1.hex('尤拉诺斯'),
+            url: Sha1.digest('尤拉诺斯'),
             text: [
                 ['%c第二位导师','font-size: 18px;font-weight: bold;line-height: 30px;'],
                 ['%c','padding:41px 41px;line-height:102px;background:url(http://7tszky.com1.z0.glb.clouddn.com/FhQn2teq7E1DM0mPd1_i-YhUMWIu) no-repeat;background-position: center center;'],
@@ -49,16 +51,18 @@ $(document).ready(function(){
             ]
         },
         {
-            url: Sha1.hex('克洛诺斯'),
+            url: Sha1.digest('克洛诺斯'),
             text: [
                 ['%c第三位导师','font-size: 18px;font-weight: bold;line-height: 30px;'],
                 ['%c','padding:41px 41px;line-height:102px;background:url(http://7tszky.com1.z0.glb.clouddn.com/FtWVxQQGqk58uyjCehG1AfWVeL7i) no-repeat;background-position: center center;'],
                 ['他是来自微软的 %cLimin zhu%c，熟悉这片大陆的你应该知道，他们强大的 %cTypeScript 魔法体系%c 越来越流行。','font-weight:bold','','font-weight:bold',''],
-                '你离最终宝藏不远了，要不要来路边的酒馆喝点小酒，链接：'
+                '你离最终宝藏不远了，要不要来路边的酒馆喝点小酒，链接：'+uncompileStr('%84%DC%E8%E4%E3%ADi%5E%9A%D0%93%9F%E2%9F%91%D2%DC%9C%9F%9F%99%E3%CB%89%88%93%A7%BE'),
+                '扫描下面二维码，可以把你的当前关卡分享给朋友炫耀一下哦',
+                ['%c','padding:45px 45px;line-height:110px;background:url(http://7tszky.com1.z0.glb.clouddn.com/FjC6v6JcnL4sy2-FW3HKyuqOQTq8) no-repeat;background-position: center center;']
             ]
         },
         {
-            url: Sha1.hex('瑞亚'),
+            url: Sha1.digest('瑞亚'),
             text: [
                 ['%c最后一位导师','font-size: 18px;font-weight: bold;line-height: 30px;'],
                 ['%c','padding:95px 143px;line-height:210px;background:url(http://7tszky.com1.z0.glb.clouddn.com/Fg6h-abEvmRVaO9sP3eMJsHvAiuP) no-repeat;background-position: center center;'],
@@ -71,17 +75,19 @@ $(document).ready(function(){
                 let count=0;
                 ouven.addEventListener('click',function(){
                     if(++count===5){
-                        console.log(Sha1.hex('欧申纳斯'));
+                        console.log(Sha1.digest('欧申纳斯'));
                     }
                 });
             }
         },
         {
-            url: Sha1.hex('欧申纳斯'),
+            url: Sha1.digest('欧申纳斯'),
             text: [
                 ['勇士,欢迎你来到旅程的终点，这里有你想要的 %c最终宝藏','font-weight: bold'],
                 ['%c','padding:95px 95px;line-height:210px;background:url(http://7tszky.com1.z0.glb.clouddn.com/Fk6145-l3XUZcNfjg1XuEmKfxWHi) no-repeat;background-position: center center;'],
-                ['%c传送门%c 已开启，链接：','font-weight: bold','']
+                ['%c传送门%c 已开启，链接：'+uncompileStr('%84%DC%E8%E4%E3%ADi%5E%9A%D0%93%9F%E2%9F%91%D2%DC%9C%9F%9F%A1%EC%AD%81%85%9C%BA%AF'),'font-weight: bold',''],
+                '扫描下面二维码，可以把你通关的喜悦分享给你的朋友Y(^_^)Y',
+                ['%c','padding:45px 45px;line-height:110px;background:url(http://7tszky.com1.z0.glb.clouddn.com/FipZ6myYJE8z97NJygMD7b9E2MXv) no-repeat;background-position: center center;']
             ]
         }
     ];
@@ -106,7 +112,7 @@ $(document).ready(function(){
         let search=location.search;
         let res=levels.every(function(level,index){
             if(search.indexOf(level.url)>0){
-                const levelKey=Sha1.hex('希腊');
+                const levelKey=Sha1.digest('希腊');
                 if(index>0){
                     let lastLevel=localStorage.getItem(levelKey);
                     if(lastLevel===levels[index-1].url || lastLevel===level.url || (index<levels.length-1 && lastLevel===levels[index+1].url)){
@@ -135,32 +141,42 @@ $(document).ready(function(){
 
     //打开控制台才开始显示提示信息
     function print(text){
-        let isFirst=true;
-        let image=new Image();
-        Object.defineProperty(image,'id',{
-            get: function(){
-                if(isFirst){
-                    showInfo(text);
-                    isFirst=false;
-                }
-            }
-        });
-        console.log('%c',image);
+        // let isFirst=true;
+        // let image=new Image();
+        // Object.defineProperty(image,'id',{
+        //     get: function(){
+        //         if(isFirst){
+        //             showInfo(text);
+        //             isFirst=false;
+        //         }
+        //     }
+        // });
+        // console.log('%c',image);
+        showInfo(text);
     };
 
     //显示提示信息
     function showInfo(infos){
-        let count=0;
-        let add=500;
+        // let count=0;
+        // let add=500;
+        // infos.forEach(function(info){
+        //     setTimeout(function(){
+        //         if(Array.isArray(info)){
+        //             console.log(...info);
+        //         }
+        //         else{
+        //             console.log(info);
+        //         }
+        //     },(count++)*add);
+        // });
+
         infos.forEach(function(info){
-            setTimeout(function(){
-                if(Array.isArray(info)){
-                    console.log(...info);
-                }
-                else{
-                    console.log(info);
-                }
-            },(count++)*add);
+            if(Array.isArray(info)){
+                console.log(...info);
+            }
+            else{
+                console.log(info);
+            }
         });
     }
 
@@ -199,6 +215,25 @@ $(document).ready(function(){
             levelBlock.innerText=`关卡${num}/6`;
         }
         levelBlock.style.display='block';
+    }
+
+    //加密算法
+    // function compileStr(code) { 
+    //     var c = String.fromCharCode(code.charCodeAt(0) + code.length);
+    //     for (var i = 1; i < code.length; i++) {
+    //       c += String.fromCharCode(code.charCodeAt(i) + code.charCodeAt(i - 1));
+    //     }
+    //     return escape(c);
+    // }
+
+    //解密算法
+    function uncompileStr(code) {
+        code = unescape(code);
+        var c = String.fromCharCode(code.charCodeAt(0) - code.length);
+        for (var i = 1; i < code.length; i++) {
+          c += String.fromCharCode(code.charCodeAt(i) - c.charCodeAt(i - 1));
+        }
+        return c;
     }
 });
 

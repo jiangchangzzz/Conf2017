@@ -256,13 +256,14 @@
     }
 
     #portal{
+        position: relative;
         font-size: 24px;
         font-weight: bold;
         opacity: 0;
+        z-index: 5000;
     }
 
     .first-time{
-        // margin-bottom: 79px;
         font-size: 24px;
         font-weight: bold;
 
@@ -290,7 +291,7 @@
     .first-btn-group{
         display: flex;
         justify-content: center;
-        margin-bottom: 80px;
+        margin-bottom: 20px;
 
         .btn{
             position: relative;
@@ -298,8 +299,9 @@
         }
 
         .online-btn{
-            @include sprite($btn-xszbp-normal);
+            display: block;
             margin-right: 27px;
+            @include sprite($btn-xszbp-normal);
 
             &:hover{
                 @include sprite($btn-xszbp-hover);
@@ -307,6 +309,7 @@
         }
 
         .bird-btn{
+            display: block;
             margin-right: 27px;
             @include sprite($btn-xxznp-normal);
 
@@ -316,6 +319,7 @@
         }
 
         .offline-btn{
+            display: block;
             margin-right: 27px;
             @include sprite($btn-xxptp-normal);
 
@@ -388,6 +392,7 @@
 
         .ticket-info{
             color: #00ffff;
+            min-height: 16px;
         }
     }
 
@@ -433,14 +438,9 @@
     &.lecture{
         padding: 112px 10px 0 180px;
         background-image: url(#{$cdn}/images/volunteer-bg.png);
+        background-repeat: no-repeat;
         background-position: center center;
-        background-size: cover;
-
-        // @media (max-width: $screen-sm-max){
-        //     display: block;
-        //     width: 100%;
-        //     padding: 112px 0 0 0;
-        // }
+        background-size: contain;
 
         .block-text strong{
             color: #4de577;
