@@ -3,10 +3,10 @@
 $(document).ready(function(){
     const startDate=new Date(2017,7,18).getTime();   //活动开始时间,月份从0开始
     const endDate=new Date(2017,8,16).getTime();   //活动结束时间
-    const weekDay=1;   //活动发生在星期几，0表示星期天，6表示星期六
-    const hour=17;
+    const weekDay=5;   //活动发生在星期几，0表示星期天，6表示星期六
+    const hour=14;
     const startMinute=0;
-    const endMinute=60;
+    const endMinute=30;
 
     let onlineUrl=null;
     let offlineUrl=null;
@@ -29,7 +29,7 @@ $(document).ready(function(){
             && time.getDay()===weekDay){
             function ready(){
                 let now=new Date();
-                if(now.getHours()===hour && now.getMinutes()>=startMinute && now.getMinutes()<=endMinute){
+                if(now.getHours()===hour && now.getMinutes()>=startMinute && now.getMinutes()<endMinute){
                     btn.addClass('active');
                 } else {
                     btn.removeClass('active');

@@ -1,0 +1,126 @@
+p,h1,h2,h3{
+    margin: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 283px;
+}
+
+.coupon-title{
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.coupon-cover{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 283px;
+    height: 105px;
+    margin-top: 43px;
+    margin-bottom: 15px;
+    background-color: #d7443d;
+    color: #fff;
+    border-radius: 4px;
+
+    p{
+        margin-top: 10px;
+    }
+
+    .cover-icon{
+        margin-top: -20px;
+        font-size: 26px;
+    }
+
+    .cover-price{
+        margin: 0 10px;
+        font-size: 68px;
+        font-weight: bold;
+    }
+
+    .cover-text{
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    &:before{
+        position: absolute;
+        left: -9px;
+        top: 50%;
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin-top: -9px;
+        background-color: #efefef;
+        border-radius: 9px;
+        content: '';
+    }
+
+    &:after{
+        position: absolute;
+        right: -9px;
+        top: 50%;
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin-top: -9px;
+        background-color: #efefef;
+        border-radius: 9px;
+        content: '';
+    }
+}
+
+.coupon-desc{
+    font-size: 14px;
+    line-height: 22px;
+    color: #777;
+
+    a{
+        color: #00a4ff;
+        text-decoration: none;
+    }
+}
+
+.btn-group{
+    display: flex;
+    margin-top: 15px;
+
+    .coupon-btn{
+        display: block;
+        width: 134px;
+        height: 42px;
+        margin-right: 10px;
+        line-height: 42px;
+        font-size: 18px;
+        text-align: center;
+        color: #188eee;
+        border: 1px solid #188eee;
+        border-radius: 4px;
+        text-decoration: none;
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &.primary{
+            color: #fff;
+            background-color: #188eee;
+        }
+    }
+}

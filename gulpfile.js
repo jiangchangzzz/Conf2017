@@ -16,10 +16,10 @@ const reload = browserSync.reload;
 
 let dev = true;
 
-const htmlPath=['dist/index.html','dist/en.html']
+const htmlPath=['dist/index.html','dist/en.html','dist/coupon.html'];
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/main.scss')
+  return gulp.src(['app/styles/main.scss','app/styles/coupon.scss'])
     .pipe($.plumber())
     .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.sass.sync({

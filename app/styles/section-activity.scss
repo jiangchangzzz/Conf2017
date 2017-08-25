@@ -1,0 +1,166 @@
+.activity{
+    &-container{
+        width: 1200px;
+        margin: 80px auto 0;
+    }
+
+    &-list{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        li{
+            width: 332px;
+            min-height: 509px;
+            padding: 72px 24px 0;
+            background-image: url(/images/activity-block.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            transition: all 0.5s ease;
+
+            &:hover{
+                transform: translateY(-14px);
+            }
+        }
+    }
+
+    &-img-box{
+        position: relative;
+        height: 161px;
+        margin-bottom: 42px;
+        text-align: center;
+    }
+
+    &-title{
+        margin-bottom: 8px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &-add{
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    &-content{
+        color: #fff;
+        font-size: 20px;
+        line-height: 36px;
+
+        a{
+            color: #33ff66;
+            text-decoration: underline;
+        }
+
+        strong{
+            color: #33ff66;
+        }
+    }
+
+    .weibo-block{
+        .activity-img{
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 199px;
+            height: 161px;
+            opacity: 1;
+            transition: all .5s;
+        }
+
+        .activity-qr{
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 161px;
+            height: 161px;
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        &:hover{
+            .activity-img{
+                opacity: 0;
+            }
+
+            .activity-qr{
+                opacity: 1;
+            }
+        }
+
+        .activity-title,.activity-add{
+            color: #ff6666;
+        }
+    }
+
+    .egg-block{
+        .activity-img{
+            width: 193px;
+            height: 166px;
+            transition: all 0.5s;
+        }
+
+        &:hover{
+            .activity-img{
+                transform: scale(1.1);
+            }
+        }
+
+        .activity-title,.activity-add{
+            color: #ffcc99;
+        }
+    }
+
+    .time-block{
+
+        .clock-box{
+            position: relative;
+            width: 155px;
+            height: 165px;
+            margin: 0 auto;
+
+            .clock-img{
+                width: 100%;
+                height: 100%;
+            }
+
+            .pointer-img{
+                position: absolute;
+                left: 66px;
+                top: 40px;
+                transform-origin: 50% 47px;
+            }
+        }
+
+        &:hover{
+            .pointer-img{
+                animation: pointer 1s linear infinite;
+            }
+        }
+
+        .activity-title,.activity-add{
+            color: #66ccff;
+        }
+    }
+
+    &-right{
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@keyframes pointer{
+    from{
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}

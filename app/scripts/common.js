@@ -10,8 +10,12 @@ $(document).ready(function () {
     afterLoad: function (anchorLink, index) {
       activeLink($('#header-nav').children().eq(index - 1));
     },
+    onLeave: function(index,nextIndex,direction){
+      lazyLoad(nextIndex);
+    },
     scrollOverflow: true,
-    lazyLoading: false
+    lazyLoading: false,
+    normalScrollElements: '#map'
   });
 
   //小屏幕下显示隐藏菜单
@@ -41,31 +45,102 @@ $(document).ready(function () {
   });
 
   //添加loading页面
-  var imgList = $('.section');
-  var imgNum = imgList.length;
-  for (let i = 0, len = imgList.length; i < len; i++) {
-    let url = imgList.eq(i).data('url');
+  // var imgList = $('.section');
+  // var imgNum = imgList.length;
+  // for (let i = 0, len = imgList.length; i < len; i++) {
+  //   let url = imgList.eq(i).data('url');
 
-    let img = new Image();
-    img.onload = function () {
-      imgList.eq(i).css('background-image', 'url(' + url + ')');
-      imgNum--;
-      if (imgNum === 0) {
-        $('#loading').hide();
-        var search = location.search;
-        if (search.indexOf('shicha=1') !== -1) {
-          var scene = document.getElementById('scene');
-          scene.style.display = 'block';
-          var parallax = new Parallax(scene);
+  //   let img = new Image();
+  //   img.onload = function () {
+  //     imgList.eq(i).css('background-image', 'url(' + url + ')');
+  //     imgNum--;
+  //     if (imgNum === 0) {
+  //       $('#loading').hide();
+  //       var search = location.search;
+  //       if (search.indexOf('shicha=1') !== -1) {
+  //         var scene = document.getElementById('scene');
+  //         scene.style.display = 'block';
+  //         var parallax = new Parallax(scene);
+  //       }
+  //     }
+  //   };
+  //   img.src = url;
+  // }
+
+  // Anm.init(document.getElementById('scene-canvas'));
+  // //设置一个超时，如果时间内没有加载完图片，也进入页面
+  // setTimeout(function () {
+  //   $('#loading').hide();
+  // }, 0);
+
+  // $('#loading').hide();
+
+  var imgList = $('.section');
+
+  function loading(){
+    let hash=location.hash;
+    let index=1;
+    if(hash){
+      anchors.every(function(anchor,i){
+        if(hash.indexOf(anchor)>=0){
+          index=i+1;
+          return false;
+        } else {
+          return true;
+        }
+      });
+    }
+
+    lazyLoad(index,function(){
+      $('#loading').hide();
+    });
+
+    setTimeout(function () {
+      $('#loading').hide();
+    }, 3000);
+
+    Anm.init(document.getElementById('scene-canvas'));
+  }
+  loading();
+
+  //图片懒加载
+  function lazyLoad(index,callback){
+    let count=0;
+    function compute(){
+      count++;
+      if(count>=3){
+        if(typeof callback==='function'){
+          callback();
         }
       }
-    };
-    img.src = url;
+    }
+
+    loadImage(index,compute);
+
+    if(index!=imgList.length){
+      loadImage(index+1,compute);
+    } else {
+      count++;
+    }
+
+    if(index!==1){
+      loadImage(index-1,compute);
+    } else {
+      count++;
+    }
   }
 
-  Anm.init(document.getElementById('scene-canvas'));
-  //设置一个超时，如果时间内没有加载完图片，也进入页面
-  setTimeout(function () {
-    $('#loading').hide();
-  }, 5000);
+  //加载图片
+  function loadImage(index,callback){
+    let i=index-1;
+    let url=imgList.eq(i).data('url');
+    let img=new Image();
+    img.onload=function(){
+      imgList.eq(i).css('background-image', 'url(' + url + ')');
+      if(typeof callback==='function'){
+        callback();
+      }
+    };
+    img.src=url;
+  }
 });

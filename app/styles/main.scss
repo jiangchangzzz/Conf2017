@@ -4,6 +4,8 @@
 @import './commen.scss';
 @import './section-partner.scss';
 @import './section-schedule.scss';
+@import './section-activity.scss';
+@import './section-address.scss';
 @import './clock.scss';
 
 .wrap--fullpage {
@@ -49,6 +51,12 @@
 }
 
 .section.active{
+    .fade-in{
+        @media(min-width: $screen-sm-max){
+            animation: fadeIn 1s;
+        }
+    }
+
     .fade-in-up{
         @media (min-width: $screen-sm-max){
             animation: fadeInUp 1s;
@@ -70,7 +78,7 @@
 
     .fade-in-left{
         @media (min-width: $screen-sm-max){
-            animation: fadeInLeft 1.5s;
+            animation: fadeInLeft 1s;
         }
     }
 
@@ -88,7 +96,7 @@
 
     .fade-in-right{
         @media (min-width: $screen-sm-max){
-            animation: fadeInRight 1.5s;
+            animation: fadeInRight 1s;
         }
     }
 }
@@ -106,7 +114,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    // background-color: #000;
+    background-color: #5b5b73;
 }
 
 .section-first{
@@ -127,6 +135,7 @@
       height: 100%;
       top: 0;
       position: absolute;
+      animation: fontOpacity 2s infinite;
     }
     .font_ct {
       width: 100%;
@@ -139,7 +148,6 @@
       span{
         /*border: 1px solid #ccc;*/
         text-shadow: 1px 1px 1px #fff;
-        opacity: 0.2;
       }
       .p_1 {
         position: absolute;
@@ -930,6 +938,33 @@
     to{
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fontOpacity {
+    from{
+        opacity: 0.1;
+        transform: scale(0.8);
+    }
+
+    50%{
+        opacity: 0.3;
+        transform: scale(0.85);
+    }
+
+    to{
+        opacity: 0.1;
+        transform: scale(0.8);
     }
 }
 

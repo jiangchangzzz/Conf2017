@@ -47,7 +47,7 @@
 
 .header-nav{
     float: left;
-    margin-left: 184px;
+    margin-left: 160px;
 
     @media (max-width: $screen-md-max){
         margin-left: 0;
@@ -130,4 +130,10 @@
             margin-bottom: 0;
         }
     }
+}
+
+#level-block{
+    color: #3db55e;
+    font-weight: bold;
+    font-size: 20px;
 }
