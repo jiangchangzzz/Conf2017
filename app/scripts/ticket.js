@@ -6,7 +6,7 @@ $(document).ready(function(){
     const weekDay=5;   //活动发生在星期几，0表示星期天，6表示星期六
     const hour=14;
     const startMinute=0;
-    const endMinute=30;
+    const endMinute=60;
 
     let onlineUrl=null;
     let offlineUrl=null;

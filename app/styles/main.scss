@@ -301,14 +301,29 @@
         justify-content: center;
         margin-bottom: 20px;
 
+        @media (max-width: $screen-sm-max){
+            flex-direction: column;
+            align-items: center;
+        }
+
         .btn{
             position: relative;
+            margin-right: 27px;
             z-index: 5000;
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            @media (max-width: $screen-sm-max){
+                margin-right: 0;
+                margin-bottom: 2px;
+                transform: scale(0.8);
+            }
         }
 
         .online-btn{
             display: block;
-            margin-right: 27px;
             @include sprite($btn-xszbp-normal);
 
             &:hover{
@@ -318,7 +333,6 @@
 
         .bird-btn{
             display: block;
-            margin-right: 27px;
             @include sprite($btn-xxznp-normal);
 
             &:hover{
@@ -328,7 +342,6 @@
 
         .offline-btn{
             display: block;
-            margin-right: 27px;
             @include sprite($btn-xxptp-normal);
 
             &:hover{
@@ -416,7 +429,7 @@
             color: #06D1F8;
 
             .point{
-                margin: 0 20px;
+                margin-left: 8px;
                 font-size: 18px;
             }
         }
@@ -609,7 +622,7 @@
 
 .section-title{
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
     color: #fff;
     font-size: 48px;
     font-weight: bold;
@@ -733,7 +746,7 @@
 /* 资讯页面 */
 .section-information{
     .section-title{
-        margin-bottom: 0;
+        margin-bottom: 18px;
 
         @media (max-width: $screen-sm-max){
             padding-top: 0;
@@ -753,7 +766,7 @@
     .information-list li{
         display: flex;
         justify-content: space-between;
-        padding: 20px 0;
+        padding: 18px 0;
         border-bottom: 1px solid #8c8c9d;
 
         &:last-child{
@@ -767,9 +780,9 @@
     }
 
     .list-img{
-        max-width: 276px;
+        max-width: 265px;
         width: 100%;
-        height: 200px;
+        height: 192px;
         border: 2px solid #fff;
         background-position: center;
         background-size: cover;
@@ -783,6 +796,9 @@
     }
 
     .list-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         max-width: 910px;
         width: 100%;
         padding: 0 30px;
@@ -798,7 +814,7 @@
         }
 
         p{
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             color: #fff;
             font-size: 18px;
             line-height: 30px;

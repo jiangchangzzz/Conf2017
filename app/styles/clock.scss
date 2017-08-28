@@ -7,6 +7,10 @@
   height: 179px;
   background-image: url(/images/start-time.png);
 
+  @media (max-width: $screen-sm-max){
+    display: none;
+  } 
+
   .clock-inner{
     position: absolute;
     left: 50%;
