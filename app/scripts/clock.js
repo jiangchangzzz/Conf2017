@@ -18,7 +18,8 @@ $(document).ready(function(){
     var second1 = $('.s1');
     var second2 = $('.s2');
 
-    var openStamp = (new Date('2017-9-16 9:30:00')).getTime();
+    // var openStamp = (new Date('2017-9-16 9:30:00')).getTime();
+    var openStamp = (new Date('2017-9-1 0:00:00')).getTime();
     var timezoneOffset = (new Date()).getTimezoneOffset() * 60000;
     var updateClock = function() {
       var d, h, m, p, s;

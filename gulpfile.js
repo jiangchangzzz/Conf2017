@@ -22,7 +22,7 @@ gulp.task('styles', () => {
   return gulp.src(['app/styles/main.scss','app/styles/coupon.scss'])
     .pipe($.plumber())
     .pipe($.if(dev, $.sourcemaps.init()))
-    .pipe($.sass.sync({
+    .pipe($.sass.sync({ 
       outputStyle: 'expanded',
       precision: 10,
       includePaths: [path.join(__dirname,'app/styles')]
@@ -200,7 +200,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-//生成雪碧图
+//生成小图标雪碧图
 gulp.task('sprite',()=>{
   return gulp.src('app/images/sprite/*.png')
     .pipe($.spritesmith({
@@ -243,6 +243,7 @@ gulp.task('preimg',()=>{
     .pipe(gulp.dest('dist/'));
 });
 
+//为js添加md5码
 gulp.task('revjs',()=>{
   return gulp.src('dist/scripts/*.js')
     .pipe(rev())

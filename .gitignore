@@ -7,3 +7,4 @@ yarn.lock
 npm-debug.log
 dist
 dist.zip
+rev

@@ -1,7 +1,7 @@
 @import './variables.scss';
 @import './reset.scss';
 @import './sprite.scss';
-@import './commen.scss';
+@import './header.scss';
 @import './section-partner.scss';
 @import './section-schedule.scss';
 @import './section-activity.scss';
@@ -435,6 +435,7 @@
         }
 
         .info-right{
+            position: relative;
             color: #0C9CB8;
             text-align: left;
             width: 460px;
@@ -442,6 +443,15 @@
             background: rgba(0,0,0,0.1);
             padding: 10px;
             line-height: 20px;
+            z-index: 5000;
+
+            a{
+                color: #fff;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
